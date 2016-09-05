@@ -10,7 +10,16 @@ def gcd_naive(a, b):
 
     return current_gcd
 
+def gcd_fast(a, b):
+	if b == 0:
+		return a
+	a_ = a % b
+	return gcd_fast(b, a_)
+    
+
 if __name__ == "__main__":
     input = sys.stdin.read()
     a, b = map(int, input.split())
-    print(gcd_naive(a, b))
+    res1 = gcd_naive(a, b)
+    res2 = gcd_fast(a, b)
+    print(res1, res2)
