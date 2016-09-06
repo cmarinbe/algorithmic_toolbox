@@ -4,3 +4,5 @@
 *.out
 *.zip
 *.java
+.DS_Store
+*.py
